@@ -11,7 +11,11 @@ RSpec.describe Api::V1::RecipesController do
     end
 
     it "html body contains expected recipe attributes" do
-      expect(response.body).to have_content(%w[id difficulty cook_time])
+      pending
+      uri = URI('http://localhost:3000/api/v1/recipes')
+      recipes = Net::HTTP.get(uri)
+
+       expect(response.body).to have_content(recipes[0]['title'])
     end
   end
 end
