@@ -1,5 +1,5 @@
 require 'rails_helper'
-RSpec.describe Api::V1::RecipesController do
+RSpec.describe RecipesController do
 
   describe "GET index" do
     before do

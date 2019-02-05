@@ -1,1 +1,23 @@
-<%= @recipes %>
+<%#= @recipes %>
+<div class="row float-left ml-0 mr-1">
+    <% @recipes.each do |recipe| %>
+      <div class="col-md-6">
+      <div class="card mb-4 shadow-sm">
+        <div class="card-body">
+          <h1 class="h4">
+            <%= link_to recipe['title'], recipe %>
+          </h1>
+          <% if recipe['spotlight'] %>
+            <%#= image_tag 'star.png', class:'spotlight'%>
+            <p>Receita em destaque</p>
+          <% end %>
+          <ul>
+            <li><%= recipe['recipe_type'] %></li>
+            <li><%= recipe['cuisine'] %></li>
+            <li><%= recipe['difficulty'] %></li>
+            <li><%= recipe['cook_time'] %> min</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+    <% end %>
