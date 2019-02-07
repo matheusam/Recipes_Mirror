@@ -16,9 +16,11 @@ class RecipesController < ApplicationController
   end
 
   def destroy
-    url = 'http://localhost:3000'
-    urn = "/api/v1/recipes/#{{ recipe: params[:id], user: 1 }}")
-    Net::HTTP.new(url).delete(urn)
+    # uri = URI("http://localhost:3000/api/v1/recipes/"), params: { recipe: params[:id], user: 1 }
+    # http = Net::HTTP.new(uri.host, uri.port)
+    # req = Net::HTTP::Delete.new(uri.path)
+    # res = http.request(req)
+
   end
 
   private

@@ -6,6 +6,8 @@ feature 'View home page' do
 
       expect(page).to have_css('h1', text: 'Recipes Mirror')
       expect(page).to have_css('small', text: 'O mirror que cai junto com o server xD')
+      expect(page).to have_css('h1', text: 'Feijoada')
+      expect(page).to have_css('h1', text: 'Strudel')
   end
 
   scenario 'View menu options' do

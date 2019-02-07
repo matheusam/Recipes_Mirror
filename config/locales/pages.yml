@@ -4,3 +4,4 @@ pt-BR:
   create_recipes: 'Criar receita'
   edit_recipes: 'Editar receita'
   delete_recipes: 'Apagar receita'
+  back: 'Voltar'
